@@ -1,0 +1,26 @@
+.gradient_bg {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    110deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(251, 218, 97, 1) 0%,
+    rgba(255, 90, 205, 1) 74%
+  );
+  transition: background-position 0.5s;
+}
+
+.gradient_bg:hover {
+  background-position: 100% 0;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.button-animation {
+  transition: transform 0.5s;
+}
+
+.button-animation.clicked {
+  transform: translateX(50%);
+}
