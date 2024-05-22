@@ -1,5 +1,7 @@
-import * as React from "react"
+// THE SELECTOR TO SWITCH BETWEEN THE SREETCARD
+// THE SELECT ARE JUST DEMO TO SHOW HOW THE SELECTOR WORKS
 
+import * as React from "react"
 import {
   Select,
   SelectContent,

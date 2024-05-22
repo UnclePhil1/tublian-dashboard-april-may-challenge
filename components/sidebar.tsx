@@ -1,3 +1,4 @@
+// SIDEBAR NAVIGATION TO SWITCH BETWEEN PAGES IN THE DASHBOARD
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -17,9 +18,11 @@ import {
 
 
 const Sidebar = () => {
+  // DECLEARING OF CONSTANT VARIABLES
   const pathname = usePathname();
   const router = useRouter();
 
+  // DECLEARATION OF THE SIDEBAR NAVIGATION ROUTE ARRAY
   const routes = [
     {
       icon: DonutSmallIcon,
@@ -44,6 +47,7 @@ const Sidebar = () => {
     },
   ];
 
+  // THE SIDEBAR NAVIGATION FOOTER ARRAY FOR THE SETTING & LOGOUT ROUTE BUTTONS
   const footerRoutes = [
     {
       icon: Settings,
@@ -61,6 +65,7 @@ const Sidebar = () => {
     },
   ];
 
+  // FUNCTION TO CHECK THE VALIDATION OF URL FOR THE SIDEBAR ROUTE
   const onNavigate = (url: string, pro: boolean) => {
     // TODO: Check if pro
 
@@ -69,6 +74,7 @@ const Sidebar = () => {
 
   return (
     <div className="space-y-4 flex flex-col h-full text-primary w-full">
+      {/* LOGGED IN USER PROFILE IMAGE */}
       <Image
         src={'/svg/frametwo.png'}
         alt={'Profile Image'}
@@ -76,8 +82,10 @@ const Sidebar = () => {
         height={300}
         className="w-8 h-8 mt-6 ml-[80%] profile_image"
       />
+      {/* CONTAINER FOR THE SIDEBAR ROUTES */}
       <div className="p-3">
         <div className="space-y-2">
+          {/* MAP FUNTION TO GET THE SIDEBAR OUTS AND DISPLAY THEM */}
           {routes.map((route) => (
             <div
               onClick={() => onNavigate(route.href, route.pro)}
@@ -87,6 +95,7 @@ const Sidebar = () => {
               )}
               key={route.href}
             >
+              {/* TOOLTIP TO SHOW THE SIDEBAR ICON OR BUTTON NAME IN A SMALL SCREEN OR MIBLE VIEW */}
               <div className="flex flex-row gap-y-2 justify-start items-center flex-1 w-full gap-2">
                 <TooltipProvider>
                   <Tooltip>
@@ -106,6 +115,7 @@ const Sidebar = () => {
             </div>
           ))}
         </div>
+        {/* MAPPING FUNCTION FOR FOOTER, AND FOOTER CONTAINER */}
         <div className="space-y-2 mt-[100%] footer_route">
           {footerRoutes.map((footerRoute) => (
             <div
@@ -116,6 +126,7 @@ const Sidebar = () => {
               )}
               key={footerRoute.href}
             >
+              {/* TOOLTIP TO SHOW THE SIDEBAR ICON OR BUTTON NAME IN A SMALL SCREEN OR MIBLE VIEW */}
               <div className="flex flex-row gap-y-2 justify-start items-center flex-1 w-full gap-2">
                 <TooltipProvider>
                   <Tooltip>

@@ -1,3 +1,4 @@
+// NAVAGATION COMPONENT FOR THE TUBLIAN SITE
 import React from "react";
 import Link from "next/link";
 import { SelectCard } from "./seleector";
@@ -11,7 +12,6 @@ const Navbar = () => {
                         <Link href={'/'} className="font-semibold text-secondary">Find Developers</Link>
                     </h2>
                 </div>
-                {/* <SearchInputBar /> */}
                 <div className="justify-center items-center gap-2 hidden md:flex">
                     <SelectCard />
                 </div>

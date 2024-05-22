@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css'; // Import CSS module for styles
 
+//  TOGGLE BUTTON FOR THE FREELANCE. SWITCHING BETWEEN FREELANCE AND FULLTIME
+
 const ToggleBtn = () => {
+    // DECLEARING A USESTATE TO CHECK AND SWITCH THE CURRENT STATE OF THE BUTTONS
     const [isFreelance, setIsFreelance] = useState(false);
 
+    // RENDERING THE USESTATE IN A FUNCTION
     const toggleFreelance = () => {
         setIsFreelance(!isFreelance);
     };

@@ -1,3 +1,4 @@
+/* BUTTON GRADIENT EFFECT CLASS */
 .gradient_bg {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -9,6 +10,7 @@
   transition: background-position 0.5s;
 }
 
+/* BUTTON GRADIENT EFFECT WHEN HOVERED ON */
 .gradient_bg:hover {
   background-position: 100% 0;
 }
@@ -17,10 +19,12 @@
   overflow: hidden;
 }
 
+/* SIMPLE ANIMATION FOR A BUTTON */
 .button-animation {
   transition: transform 0.5s;
 }
 
+/* TRANSITION CHANGES ON BUTTON CLICKED */
 .button-animation.clicked {
   transform: translateX(50%);
 }
